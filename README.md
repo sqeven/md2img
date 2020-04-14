@@ -6,7 +6,7 @@ Convert a Markdown to IMG.
 ## Usage
 
     $ go get github.com/sqeven/md2img
-    $ md2img --css=main.css target.md output.png
+    $ md2img target.md output.png
 
 ## Requires
 
