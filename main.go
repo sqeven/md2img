@@ -54,7 +54,7 @@ func main() {
 
 	md := NewMarkdown(text)
 
-	opts := []string{"--width 600"}
+	opts := []string{"--crop-w 600"}
 	if *css != "" {
 		var cssUrl string
 		u, _ := url.Parse(*css)
