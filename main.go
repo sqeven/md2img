@@ -54,7 +54,7 @@ func main() {
 
 	md := NewMarkdown(text)
 
-	opts := []string{"--wideth 600g"}
+	opts := []string{"--wideth 600"}
 	if *css != "" {
 		var cssUrl string
 		u, _ := url.Parse(*css)
@@ -64,7 +64,7 @@ func main() {
 		} else {
 			cssUrl = u.String()
 		}
-		opts = append(opts, "-q 66", filepath.ToSlash(cssUrl))
+		opts = append(opts, "--quiet 66", filepath.ToSlash(cssUrl))
 	}
 
 	if *html {
