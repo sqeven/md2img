@@ -64,7 +64,7 @@ func main() {
 		} else {
 			cssUrl = u.String()
 		}
-		opts = append(opts, "--quiet 66", filepath.ToSlash(cssUrl))
+		opts = append(opts, "--quality 66", filepath.ToSlash(cssUrl))
 	}
 
 	if *html {
