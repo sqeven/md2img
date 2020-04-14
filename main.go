@@ -54,7 +54,7 @@ func main() {
 
 	md := NewMarkdown(text)
 
-	opts := []string{"--format"}
+	opts := []string{""}
 	if *css != "" {
 		var cssUrl string
 		u, _ := url.Parse(*css)
