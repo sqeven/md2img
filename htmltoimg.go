@@ -10,7 +10,7 @@ import (
 
 const wkhtmltopdfCmd = "wkhtmltoimage"
 
-func HtmlToPdf(html []byte, outfile string, opts ...string) error {
+func HtmlToImg(html []byte, outfile string, opts ...string) error {
 	wkhtmltopdf := os.Getenv("MD2IMG_WKHTMLTOIMAGE")
 	if wkhtmltopdf == "" {
 		wkhtmltopdf = wkhtmltopdfCmd

@@ -35,7 +35,7 @@ func (md *Markdown) ToHtml(title string, enableExtensions bool) []byte {
 	return blackfriday.Markdown(md.text, renderer, extensions)
 }
 
-func (md *Markdown) ToPdf(outfile, title string, opts ...string) error {
+func (md *Markdown) ToImg(outfile, title string, opts ...string) error {
 	html := md.ToHtml(title, true)
-	return HtmlToPdf(html, outfile, opts...)
+	return HtmlToImg(html, outfile, opts...)
 }

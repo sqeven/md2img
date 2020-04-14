@@ -54,7 +54,7 @@ func main() {
 
 	md := NewMarkdown(text)
 
-	opts := []string{"--print-media-type"}
+	opts := []string{""}
 	if *css != "" {
 		var cssUrl string
 		u, _ := url.Parse(*css)
@@ -64,7 +64,7 @@ func main() {
 		} else {
 			cssUrl = u.String()
 		}
-		opts = append(opts, "--user-style-sheet", filepath.ToSlash(cssUrl))
+		opts = append(opts, "", filepath.ToSlash(cssUrl))
 	}
 
 	if *html {
@@ -73,7 +73,7 @@ func main() {
 		return
 	}
 
-	err = md.ToPdf(out, *title, opts...)
+	err = md.ToImg(out, *title, opts...)
 	if err != nil {
 		log.Fatal(err)
 	}
