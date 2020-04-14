@@ -54,7 +54,8 @@ func main() {
 
 	md := NewMarkdown(text)
 
-	opts := []string{"--width", "600"}
+	opts := []string{"--width", "500"}
+	// md2pdf
 	if *css != "" {
 		var cssUrl string
 		u, _ := url.Parse(*css)
@@ -64,7 +65,7 @@ func main() {
 		} else {
 			cssUrl = u.String()
 		}
-		opts = append(opts, "--quality 50", filepath.ToSlash(cssUrl))
+		opts = append(opts, "--user-style-sheet", filepath.ToSlash(cssUrl))
 	}
 
 	if *html {
