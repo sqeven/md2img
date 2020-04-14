@@ -1,0 +1,31 @@
+syslog/*
+vendor/*
+bazel-*/*
+.submodule/*
+.DS_Store
+
+# IDE Files
+/nbproject/
+.idea/*
+upload/*
+
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+## vscode file
+.vscode
+
+##config file
+app_loc.ini
+env.ini
+
+##go build file
+*.so
+*.a
+*.o
+*.exe
+*.log
